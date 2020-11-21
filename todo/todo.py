@@ -42,7 +42,12 @@ def create():
 
     return render_template('todo/create.html')
 
-@bp.route('/update',methods=['GET','POST'])
+@bp.route('/<int:id>/update',methods=['GET','POST'])
 @login_required
-def update():
+def update(id):
+    return render_template('todo/update.html',todo=todo)
+
+@bp.route('/<int:id>/delete',methods=['POST'])
+@login_required
+def delete():
     return ''
