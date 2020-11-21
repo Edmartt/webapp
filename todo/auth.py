@@ -81,5 +81,3 @@ def login_required(view):
 def logout():
     session.clear()
     return redirect(url_for('login'))
-def func():
-    pass
